@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FirstTask.FirstTaskFragment"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageview_user_photo"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/imageview_user_photo"
+        app:layout_constraintStart_toEndOf="@id/imageview_user_photo"/>
+
+    <TextView
+        android:id="@+id/textview_countFriendText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count_friends"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_user_photo"
+        app:layout_constraintStart_toStartOf="@id/textview_name"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/textview_countFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textview_countFriendText"
+        app:layout_constraintStart_toEndOf="@id/textview_countFriendText"/>
+
+    <TextView
+        android:id="@+id/textview_name_friendList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_friendList"
+        app:layout_constraintTop_toBottomOf="@id/textview_countFriend"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friend_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/textview_name_friendList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/fragment_friends_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

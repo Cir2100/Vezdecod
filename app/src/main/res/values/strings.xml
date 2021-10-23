@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Vezdecod</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    //main fragment
+    <string name="first_fragment_label">Главная</string>
+    <string name="firstTask">Первое задание</string>
+
+    //firstTaskFragment
+    <string name="second_fragment_label">Первое задание</string>
+    <string name="count_friends">Количество друзей: </string>
+    <string name="name_friendList">Список друзей: </string>
+
+    //throws
+    <string name="no_internet_connection">Нет подключения к интернету</string>
+
+</resources>
